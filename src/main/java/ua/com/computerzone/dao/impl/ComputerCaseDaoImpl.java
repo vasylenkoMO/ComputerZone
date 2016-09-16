@@ -1,6 +1,7 @@
 package ua.com.computerzone.dao.impl;
 
 import org.hibernate.Criteria;
+import org.springframework.stereotype.Repository;
 import ua.com.computerzone.dao.AbstractDao;
 import ua.com.computerzone.dao.ComputerCaseDao;
 import ua.com.computerzone.model.entity.Client;
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * Created by vastl271nko on 15.09.16.
  */
+@Repository(value = "computerCaseDao")
 public class ComputerCaseDaoImpl extends AbstractDao<Integer, ComputerCase> implements ComputerCaseDao {
     @Override
     public List<ComputerCase> findAll() {

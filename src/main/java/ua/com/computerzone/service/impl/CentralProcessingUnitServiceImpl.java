@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Service(value = "centralProcessingUnitService")
 @Transactional
-public class CentralProcessingServiceUnitImpl implements CentralProcessingUnitService {
+public class CentralProcessingUnitServiceImpl implements CentralProcessingUnitService {
 
     @Autowired
     CentralProcessingUnitDao centralProcessingUnitDao;
@@ -34,7 +34,7 @@ public class CentralProcessingServiceUnitImpl implements CentralProcessingUnitSe
     }
 
     @Override
-    public void deleteItem(CentralProcessingUnit object) {
+    public void delete(CentralProcessingUnit object) {
         centralProcessingUnitDao.deleteItem(object);
     }
 }

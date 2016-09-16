@@ -1,6 +1,7 @@
 package ua.com.computerzone.dao.impl;
 
 import org.hibernate.Criteria;
+import org.springframework.stereotype.Repository;
 import ua.com.computerzone.dao.AbstractDao;
 import ua.com.computerzone.dao.HardDiskDriveDao;
 import ua.com.computerzone.model.entity.details.HardDiskDrive;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by vastl271nko on 15.09.16.
  */
+@Repository(value = "hardDiskDriveDao")
 public class HardDiskDriveDaoImpl extends AbstractDao<Integer, HardDiskDrive> implements HardDiskDriveDao {
     @Override
     public List<HardDiskDrive> findAll() {

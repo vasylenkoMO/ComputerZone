@@ -1,6 +1,7 @@
 package ua.com.computerzone.dao.impl;
 
 import org.hibernate.Criteria;
+import org.springframework.stereotype.Repository;
 import ua.com.computerzone.dao.AbstractDao;
 import ua.com.computerzone.dao.OrderDao;
 import ua.com.computerzone.model.entity.Order;
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * Created by vastl271nko on 15.09.16.
  */
+@Repository(value = "orderDao")
 public class OrderDaoImpl extends AbstractDao<Integer, Order> implements OrderDao {
     @Override
     public List<Order> findAll() {

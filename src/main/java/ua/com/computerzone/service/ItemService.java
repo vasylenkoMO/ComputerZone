@@ -12,5 +12,5 @@ public interface ItemService<T> {
 
     public T findById(int id);
 
-    public void deleteItem(T object);
+    public void delete(T object);
 }

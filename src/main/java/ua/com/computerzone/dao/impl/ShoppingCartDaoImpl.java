@@ -1,6 +1,7 @@
 package ua.com.computerzone.dao.impl;
 
 import org.hibernate.Criteria;
+import org.springframework.stereotype.Repository;
 import ua.com.computerzone.dao.AbstractDao;
 import ua.com.computerzone.dao.ShoppingCartDao;
 import ua.com.computerzone.model.entity.ShoppingCart;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by vastl271nko on 16.09.16.
  */
+@Repository(value = "shoppingCartDao")
 public class ShoppingCartDaoImpl extends AbstractDao<Integer, ShoppingCart> implements ShoppingCartDao {
     @Override
     public List<ShoppingCart> findAll() {

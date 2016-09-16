@@ -1,6 +1,7 @@
 package ua.com.computerzone.dao.impl;
 
 import org.hibernate.Criteria;
+import org.springframework.stereotype.Repository;
 import ua.com.computerzone.dao.AbstractDao;
 import ua.com.computerzone.dao.MotherboardDao;
 import ua.com.computerzone.model.entity.details.Motherboard;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by vastl271nko on 15.09.16.
  */
+@Repository( value = "motherBoardDao")
 public class MotherboardDaoImpl extends AbstractDao<Integer, Motherboard> implements MotherboardDao {
     @Override
     public List<Motherboard> findAll() {

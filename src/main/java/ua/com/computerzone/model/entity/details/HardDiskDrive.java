@@ -23,7 +23,7 @@ public class HardDiskDrive extends Unit {
     @Column(name = "speed")
     private int speed;
 
-    @OneToMany(mappedBy = "hardDriveDisk")
+    @OneToMany(mappedBy = "hardDiskDrive")
     private Set<PersonalComputer> personalComputers = new HashSet<>();
     public HardDiskDrive() {
     }
