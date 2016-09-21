@@ -18,7 +18,7 @@ import java.util.Set;
 public class CentralProcessingUnit extends Unit {
 
     @Column(name = "frequency")
-    private int frequency;
+    private double frequency;
 
     @Column(name = "core_amount")
     private int coreAmount;
@@ -29,11 +29,11 @@ public class CentralProcessingUnit extends Unit {
     public CentralProcessingUnit() {
     }
 
-    public int getFrequency() {
+    public double getFrequency() {
         return frequency;
     }
 
-    public void setFrequency(int frequency) {
+    public void setFrequency(double frequency) {
         this.frequency = frequency;
     }
 

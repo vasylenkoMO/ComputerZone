@@ -45,9 +45,7 @@ public abstract class Unit implements Serializable {
     @Column(name = "amount")
     private int amount;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "category_id", referencedColumnName = "id")
-    private Category category;
+    private int category;
 
     @OneToMany(mappedBy = "unit")
     private Set<ShoppingCart> shoppingCarts = new HashSet<>();
@@ -106,11 +104,11 @@ public abstract class Unit implements Serializable {
         this.amount = amount;
     }
 
-    public Category getCategory() {
+    public int getCategory() {
         return category;
     }
 
-    public void setCategory(Category category) {
+    public void setCategory(int category) {
         this.category = category;
     }
 

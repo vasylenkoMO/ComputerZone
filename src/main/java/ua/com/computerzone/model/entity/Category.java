@@ -20,9 +20,6 @@ public class Category extends Model {
     private String name;
 
     @OneToMany(mappedBy = "category")
-    private Set<Unit> units = new HashSet<>();
-
-    @OneToMany(mappedBy = "category")
     private Set<ShoppingCart> shoppingCarts = new HashSet<>();
 
     public Category() {
@@ -40,11 +37,4 @@ public class Category extends Model {
         this.name = name;
     }
 
-    public Set<Unit> getUnits() {
-        return units;
-    }
-
-    public void setUnits(Set<Unit> units) {
-        this.units = units;
-    }
 }

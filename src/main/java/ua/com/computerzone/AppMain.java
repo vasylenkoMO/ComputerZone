@@ -7,8 +7,10 @@ import ua.com.computerzone.configuraion.ComputerZoneConfig;
 import ua.com.computerzone.dao.CategoryDao;
 import ua.com.computerzone.model.entity.Category;
 import ua.com.computerzone.model.entity.details.CentralProcessingUnit;
+import ua.com.computerzone.model.entity.details.GraphicsProcessingUnit;
 import ua.com.computerzone.service.CategoryService;
 import ua.com.computerzone.service.CentralProcessingUnitService;
+import ua.com.computerzone.service.GraphicsProcessingUnitService;
 import ua.com.computerzone.service.impl.CategoryServiceImpl;
 
 /**
@@ -20,24 +22,16 @@ public class AppMain {
 
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(ComputerZoneConfig.class);
 
-        CategoryService categoryService = (CategoryService)context.getBean("categoryService");
-        Category category = categoryService.findById(1);
-
-        CentralProcessingUnitService centralProcessingUnitService =
-                (CentralProcessingUnitService)context.getBean("centralProcessingUnitService");
 
         CentralProcessingUnit centralProcessingUnit = new CentralProcessingUnit();
 
-        centralProcessingUnit.setUrl("blablabla");
-        centralProcessingUnit.setModel("I5-4200M");
-        centralProcessingUnit.setAmount(5);
-        centralProcessingUnit.setFrequency(4);
-        centralProcessingUnit.setManufacture("Intel");
-        centralProcessingUnit.setPrice(50.25);
-        centralProcessingUnit.setCoreAmount(2);
-        centralProcessingUnit.setCategory(category);
+        GraphicsProcessingUnitService graphicsProcessingUnitService =
+                (GraphicsProcessingUnitService) context.getBean("graphicsProcessingUnitService");
 
-        centralProcessingUnitService.save(centralProcessingUnit);
+        GraphicsProcessingUnit gpu = graphicsProcessingUnitService.findById(1);
+
+        System.out.println(gpu);
+
 
     }
 }

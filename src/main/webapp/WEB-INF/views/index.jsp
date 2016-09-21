@@ -13,9 +13,8 @@
 		<link href="<c:url value= ' /static/css/responsive.css' />" rel="stylesheet">
 		<!--link href="css/blog-single.css" rel="stylesheet">
 		<link href="css/responsive.css" rel="stylesheet"-->
-    </head>   
+    </head>
 	<body>
-		
 		<!-- header -->
 		<header class="header">
 			
@@ -324,14 +323,14 @@
 									<div class="thumbnail">
 										<!--span class="e-label"><div>Sale</div></span-->
 										<span class="service-link text-center">
-											<img class="img-responsive" src="images/f-pro-1.jpg" alt="">
+											<img class="img-responsive" src="<c:url value="${gpu.url}"/>" alt="">
 											<div class="list-inline">
 												<a href=""><i class="fa fa-eye"></i></a>
 												<a href=""><i class="fa fa-link"></i></a>
 											</div>
 										</span>
 										<div class="caption">
-											<div class="category"> category
+											<div class="category"> Graphics processing unit
 												<div class="pull-right">
 													<i class="fa fa-star"></i>
 													<i class="fa fa-star"></i>
@@ -340,8 +339,8 @@
 													<i class="fa fa-star-o"></i>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
+											<h3><c:out value="${gpu.manufacture}"/> <c:out value="${gpu.model}"/></h3>
+											<strong><c:out value="${gpu.price}"/> UAH </strong>
 											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
 										</div>
 									</div>
@@ -349,7 +348,7 @@
 								<div class="col-sm-3">
 									<div class="thumbnail">
 										<span class="service-link text-center">
-											<img class="img-responsive" src="images/f-pro-1.jpg" alt="">
+											<img class="img-responsive" src="<c:url value="${cpu.url}"/>" alt="">
 											<div class="list-inline">
 												<a href=""><i class="fa fa-eye"></i></a>
 												<a href=""><i class="fa fa-link"></i></a>
@@ -365,8 +364,8 @@
 													<i class="fa fa-star-o"></i>
 												</div>
 											</div>
-											<h3>Lorem ipsum dolor sit amet dolorem molestie</h3>
-											<strong>$899.00</strong>
+											<h3><c:out value="${cpu.manufacture}"/> <c:out value="${cpu.model}"/></h3>
+											<strong><c:out value="${cpu.price}"/> UAH </strong>
 											<div><a href="#" class="btn btn-default" role="button">Add to Cart</a><span class="pull-right"><i class="fa fa-heart-o"></i> Add to Wishlist</span></div>
 										</div>
 									</div>

@@ -2,6 +2,7 @@ package ua.com.computerzone.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ua.com.computerzone.dao.GraphicsProcessingUnitDao;
 import ua.com.computerzone.model.entity.details.GraphicsProcessingUnit;
 import ua.com.computerzone.service.GraphicsProcessingUnitService;
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * Created by vastl271nko on 16.09.16.
  */
+@Transactional
 @Service(value = "graphicsProcessingUnitService")
 public class GraphicsProcessigUnitServiceImpl implements GraphicsProcessingUnitService {
 

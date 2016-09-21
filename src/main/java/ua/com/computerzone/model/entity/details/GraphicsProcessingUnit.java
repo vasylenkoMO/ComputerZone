@@ -41,4 +41,9 @@ public class GraphicsProcessingUnit extends Unit {
     public void setPersonalComputers(Set<PersonalComputer> personalComputers) {
         this.personalComputers = personalComputers;
     }
+
+    @Override
+    public String toString() {
+        return getManufacture() + " " + getModel() + " \n video RAM: " + getVideoRAM() + "\n";
+    }
 }
